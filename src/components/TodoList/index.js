@@ -1,9 +1,11 @@
 import React from 'react'
-
-function TodoList() {
+import './TodoList.css';
+function TodoList({ children }) {
   return (
-    <div>TodoList</div>
-  )
+    <ul className="TodoList">
+      {children}
+    </ul>
+  );
 }
 
 export default TodoList
