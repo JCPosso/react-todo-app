@@ -1,9 +1,18 @@
-import React from 'react'
+import './CreateTodoButton.css';
 
 function CreateTodoBtn() {
   return (
-    <div>CreateTodoBtn</div>
-  )
+    <button
+      className="CreateTodoButton"
+      onClick={
+        (event) => {
+          console.log('le diste click')
+          console.log(event)
+          console.log(event.target)
+        }
+      }
+    >+</button>
+  );
 }
 
-export default CreateTodoBtn
+export { CreateTodoBtn };
