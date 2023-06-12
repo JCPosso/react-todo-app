@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import './TodoSearch.css';
+import { TodoContext } from '../../context';
 
 function TodoSearch() {
+  const {    searchedTask,
+    setSearchedTask} = useContext(TodoContext)
   return (
-    <div>TodoSearch</div>
-  )
+    <input
+      placeholder="Search something..."
+      className="TodoSearch"
+      value={searchedTask}
+      onChange={(event) => {
+        setSearchedTask(event.target.value);
+      }}
+    />
+  );
 }
 
-export default TodoSearch
+export { TodoSearch };
